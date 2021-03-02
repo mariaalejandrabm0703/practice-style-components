@@ -42,6 +42,27 @@ export const StyledSearch = styled(Search).attrs({
   })``;
 
   //Extendiendo estilos
+  const Button = styled.button`
+  box-sizing: border-box;
+  color: white;
+  font-size: 30px;
+  font-weigth: bold;
+  height: 50px;
+  width: 200px;
+`;
+//function was removed in styled components version 4
+// export const PrimaryButton = Button.extend`
+//   background-color: #4682b4;
+// `;
+// export const SecondaryButton = Button.extend`
+//   background-color: #C0625E;
+// `;
+export const PrimaryButton = styled(Button)`
+  background-color: #4682b4;
+`;
+export const SecondaryButton = styled(Button)`
+  background-color: #C0625E;
+`;
 
 export const Practice = () => {
   return (
@@ -51,6 +72,8 @@ export const Practice = () => {
       </Container>
       <StyledSearch search={'search'}/>
       <Button1>Add</Button1>
+      <PrimaryButton>Primary</PrimaryButton>
+      <SecondaryButton>Secondary</SecondaryButton>
     </>
   );
 };
